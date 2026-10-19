@@ -8,16 +8,16 @@
 - Sandbox saved/applied and persisted after page reload: custom 1024px icon, Photo & Video category, description, published legal URLs, Desktop platform and website URL, Login Kit and Content Posting API upload mode, Direct Post off.
 - Exactly user.info.basic, video.upload, video.list configured.
 - Desktop callback persisted: http://localhost:8765/tiktok/callback.
+- Google sign-in and TikTok email verification completed. TikTok account jaidee.daily was authorized and is visibly listed as the single Sandbox target user. This is Sandbox enrollment, not the local dashboard OAuth grant.
 
 ## Not completed
-- Target account not added: posting-account login was offered securely; credential request was declined. Developer-portal authentication is separate from the posting account.
 - Sandbox credentials remain in the portal; no keys copied into chat, source control or a local Windows .env.
 - Windows filesystem/project and local dashboard are inaccessible from this cloud environment. No local integration changes or tests claimed.
 - OAuth grants, token exchange/refresh, uploads, inbox receipt and metrics tests NOT RUN. No video transferred or published.
 - Production import displayed success but did not populate fields. The equivalent production configuration and a truthful review explanation were entered directly; Save was rejected because a real demo video is required. Those production form edits remain UNSAVED in the preserved browser tab. No final review submitted.
 
 ## Resume
-1. Complete posting-account sign-in and target-user consent in TikTok. Verify the target appears in Sandbox settings.
+1. Target-user enrollment is complete for jaidee.daily. Continue with local application OAuth; do not repeat Sandbox enrollment.
 2. On Windows, use the PRIVATE automation project. Confirm .env is ignored. Copy the active Sandbox key/secret directly from the portal to that local .env, restart the dashboard and connect using Desktop PKCE plus exact registered callback. Do not put secrets in this website repository.
 3. Inspect the actual automation code against INTEGRATION-READINESS.md; source access is needed to validate retention, token storage, approval semantics and analytics mapping.
 4. Obtain approval for a specific test video before uploading it. Verify each API stage and mobile inbox receipt; a separate user action is required to publish.
